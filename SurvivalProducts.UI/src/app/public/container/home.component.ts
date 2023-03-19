@@ -14,5 +14,9 @@ export class HomeComponent implements OnInit {
         
      }
 
+     redirectTo(){
+        console.log("redirecting");
+     }
+
     
 }

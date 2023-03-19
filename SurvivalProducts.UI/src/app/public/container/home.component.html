@@ -1,7 +1,21 @@
-<div style="display: flex;">
-    <a href="#/home/products">
-        <span>Productos</span>
+<div class="wallpaper">
+    <a href="/home" style="text-decoration: none;">
+        <h1 class="title">Survival Quest</h1>
     </a>
+    <div class="bar">
+        <a class="mat-button" mat-button [matMenuTriggerFor]="menu">Products</a>
+        <a style="text-decoration: none;" class="mat-button" mat-button routerLink="/home/features">Features</a>
+        <mat-menu #menu="matMenu" class="mat-menu">
+            <button mat-menu-item routerLink="/home/products">All</button>
+            <button mat-menu-item routerLink="/home/knifes">Knifes</button>
+            <button mat-menu-item routerLink="/home/tents">Tents</button>
+            <button mat-menu-item routerLink="/home/stoves">Portable Stoves</button>
+            <button mat-menu-item routerLink="/home/compasses">Compass</button>
+            <button mat-menu-item routerLink="/home/lighters">Lighters</button>
+            <button mat-menu-item routerLink="/home/backpacks">Backpacks</button>
+            <button mat-menu-item routerLink="/home/sleepingbags">Sleeping Bags</button>
+        </mat-menu>
+    </div>
+<router-outlet></router-outlet>
 </div>
 
-<router-outlet></router-outlet>
